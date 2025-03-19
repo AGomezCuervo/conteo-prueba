@@ -1,39 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📊 Conteo - Prueba Técnica
+Este proyecto es una aplicación web sencilla con funcionalidades básicas de autenticación, gestión de empresas y productos. Está pensado como una prueba técnica y busca ser fácil de ejecutar y probar.
 
-## Getting Started
+🚀 Cómo ejecutar el proyecto
+Clona este repositorio:
 
-First, run the development server:
+bash
+Copy code
+git clone <URL-del-repo>
+Entra al directorio del proyecto:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+bash
+Copy code
+cd ./conteo-prueba
+Instala las dependencias y arranca el servidor de desarrollo:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+bash
+Copy code
+npm install && npm run dev
+Abre tu navegador en http://localhost:5173 (o la URL que te muestre la terminal).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🖥️ Funcionalidades principales
+La aplicación tiene dos vistas principales:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Login: Para autenticarse en el sistema.
+Dashboard: Desde aquí puedes:
+Crear empresas.
+Crear productos asociados a las empresas.
+Eliminar empresas.
+Eliminar productos.
+Todo desde una interfaz sencilla y directa.
 
-## Learn More
+🔐 Usuario de prueba
+Para que puedas comenzar a probar sin perder tiempo creando cuentas, ya viene un usuario preconfigurado:
 
-To learn more about Next.js, take a look at the following resources:
+Email: admin@admin.com
+Contraseña: admin123
+De todas formas, si lo deseas, puedes crear tu propio usuario desde la pantalla de login.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# conte-prueba
-# conte-prueba
-# conteo-prueba
+📦 Datos precargados
+El sistema ya incluye algunas empresas y productos de ejemplo, así que puedes comenzar a probar funcionalidades desde el primer minuto. Pero si quieres, puedes eliminarlos, modificarlos o agregar nuevos sin problema.

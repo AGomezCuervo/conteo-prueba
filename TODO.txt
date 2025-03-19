@@ -1,0 +1,26 @@
+- Crear vista crear productos
+        - product_name*
+        - product_price*
+        - append company_id
+        - product_description
+        - product_closing_rate  
+
+        - Es diferente crear productos desde la vista de "crear empresas" a "vista productos"
+
+- Filtros/Ordenamientos en los DataTables
+- Editar items de la tabla
+
+----------BACKEND ROUTES----------
+
+"@/lib/actions.js"
+
+login(formData : {email:string, password:string}) -> { message:string, succeed:bool }; redirects to "/dashboard"
+logout(void); redirects to "/login"
+signup(formData : {email:string, password:string, name:string}) -> { message:string, succeed:bool };
+createCompany(formData : {user_id:number, company_name:number}) -> { message:string, succeed:bool };
+createProduct(formData : { product_name:string, product_closing_rate?:number, company_id:number, product_price:number, product_description?: string, product_quantity?:number });
+editProduct(formData : { product_name:string, product_closing_rate?:number, product_price:number, product_description?: string, product_quantity?:number });
+getCurrenUserID(void) -> { message:string, succeed:bool, payload:number };
+getProducts(company_id:int) -> { message:string, succeed:bool, payload:[] }
+deleteProduct(product_id:number);
+
