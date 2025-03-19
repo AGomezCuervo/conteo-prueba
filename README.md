@@ -13,7 +13,7 @@ Este proyecto es una aplicación web sencilla con funcionalidades básicas de au
 
 3. Instala las dependencias y arranca el servidor de desarrollo
    ```bash
-   cd npm install && npm run dev
+   cd npm install && npm run build && npm run start
    
 4. Abre tu navegador en http://localhost:3000 (o la URL que te muestre la terminal)
 
