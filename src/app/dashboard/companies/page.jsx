@@ -22,7 +22,7 @@ export default async function DashboardPage() {
     console.log(err.message);
   }
   return (
-    <div className="container mx-auto py-10">
+    <div>
       <DataTable columns={columns} data={companies} />
     </div>
   );

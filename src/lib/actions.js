@@ -126,6 +126,23 @@ export async function signup(formData) {
   redirect("/dashboard");
 }
 
+export async function deleteCompany(company_id) {
+  if (!company_id || isNaN(company_id)) {
+    console.error("[SERVER ERROR] deleteCompany: ", "Unexpected arguments, expected: deleteCompany(company_id:number)");
+    return makeError(ErrorCodes.SERVER_ERROR);
+  }
+
+  company_id = parseInt(company_id);
+
+  try {
+    await db_getCompanyByID(company_id);
+    await db_deleteCompany(company_id);
+    return makeResponse(true);
+  } catch (err) {
+    console.error("[SERVER ERROR] deletecompany: ", err);
+    return makeError(ErrorCodes.SERVER_ERROR);
+  }
+}
 
 export async function createCompany(formData) {
   let user_id = formData.get("user_id");
@@ -170,20 +187,6 @@ export async function getCompanies(user_id) {
   }
 }
 
-export async function db_deleteCompany(company_id) {
-  try {
-
-    const stmt = db.prepare("DELETE FROM companies WHERE company_id = ?");
-    const info = stmt.run(company_id);
-
-    return info.changes > 0;
-
-  } catch (err) {
-
-    console.error("[DB ERROR] db_deleteCompany: ", err.message);
-    return false;
-  }
-}
 
 export async function deleteProduct(product_id) {
   if (!product_id || isNaN(product_id)) {

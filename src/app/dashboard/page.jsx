@@ -1,5 +1,6 @@
 "use server"
 import { columns } from "./columns.jsx";
+import { CardsSection } from "@/components/ui/cards-section";
 import { DataTable } from "./data-table.jsx";
 import { getCurrentUserID, getProductsAndCompanies } from "@/lib/actions"
 
@@ -23,6 +24,7 @@ export default async function DashboardPage() {
   }
   return (
     <div className="container mx-auto py-10">
+      <CardsSection />
       <DataTable columns={columns} data={products} />
     </div>
   );

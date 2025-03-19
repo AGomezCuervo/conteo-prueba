@@ -5,7 +5,6 @@ import { useActionState, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { showToast } from "@/lib/utils";
-import { useRouter } from "next/navigation";
 import { createCompany } from "@/lib/actions"
 import { Label } from "@/components/ui/label";
 import { getCurrentUserID } from "@/lib/actions.js";
@@ -14,7 +13,6 @@ export function CreateForm({
   className,
 }) {
 
-  const router = useRouter()
   const initialState = {
     message: "",
   };

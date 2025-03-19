@@ -1,3 +1,6 @@
+
+/* Intenté añadir más funcionalidades en el backend pero el tiempo no me alcanzó */
+
 import Database from "better-sqlite3";
 import { DatabaseError } from "@/lib/errors";
 import { SQLErrorCodes } from "@/lib/errors";
@@ -245,18 +248,19 @@ export function db_getProductByID(product_id) {
   }
 }
 
-
 export async function db_deleteCompany(company_id) {
   try {
-    const deleteProductsStmt = db.prepare("DELETE FROM products WHERE company_id = ?");
-    deleteProductsStmt.run(company_id);
 
-    const deleteCompanyStmt = db.prepare("DELETE FROM companies WHERE company_id = ?");
-    const info = deleteCompanyStmt.run(company_id);
+    const delete_products_stmt = db.prepare("DELETE FROM products WHERE company_id = ?");
+    delete_products_stmt.run(company_id);
 
-    return info.changes > 0;
+    const delete_companies_stmt = db.prepare("DELETE FROM companies WHERE company_id = ?");
+    const info_companies = delete_companies_stmt.run(company_id);
+
+    return info_companies.changes > 0;
 
   } catch (err) {
+
     console.error("[DB ERROR] db_deleteCompany: ", err.message);
     return false;
   }
