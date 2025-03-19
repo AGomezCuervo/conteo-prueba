@@ -95,7 +95,7 @@ export function CreateForm({
 
           <div className="grid justify-items-end">
             <div className="w-[70%]">
-              <Label className="mb-3" htmlFor="password">Precio de Producto (COP)</Label>
+              <Label className="mb-3" htmlFor="password">Precio de producto (COP)</Label>
               <Input
                 onChange={handleChange}
                 placeholder="15000"
