@@ -40,7 +40,7 @@ const data = {
       items: [
         {
           title: "Mis Productos",
-          url: "/dashboard",
+          url: "/dashboard/products",
         },
         {
           title: "Crear nuevo producto",

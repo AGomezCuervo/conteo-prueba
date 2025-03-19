@@ -36,7 +36,7 @@ export function DataTable({data, columns}) {
 
   return (
     <div>
-      <h1 className="text-2xl mb-5 font-bold text-center">Todas tus empresas</h1>
+      <h1 className="text-2xl mb-5 font-bold text-center">Todos tus productos</h1>
       <div className="rounded-md border">
         <Table>
           <TableHeader>
